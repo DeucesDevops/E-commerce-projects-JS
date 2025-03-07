@@ -1,2 +1,2 @@
-# JavaPath
+# JavaProjects
 Practising Java concepts
