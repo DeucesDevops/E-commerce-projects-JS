@@ -1,2 +1,0 @@
-# JavaProjects
-Practising Java concepts
