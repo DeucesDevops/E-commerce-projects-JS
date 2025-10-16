@@ -4,8 +4,12 @@ import React from 'react'
 import {ProductType} from "@/app/type";
 import Link from "next/link";
 import Image from "next/image";
+import {ShoppingCart} from "lucide-react";
 
 const ProductCard = ({product}:{product:ProductType}) => {
+
+
+
     return (
         <div className="shadow-lg rounded-lg overflow-hidden">
             <Link href={`/products/${product.id}`}>
@@ -43,6 +47,14 @@ const ProductCard = ({product}:{product:ProductType}) => {
                             ))}
                         </div>
                     </div>
+                </div>
+                {/*PRICE AND ADD-TO-CART BUTTON*/}
+                <div className="flex item-between">
+                    <p className="font-medium">${product.price.toFixed(2)}</p>
+                    <button className="flex items-center gap-2 ring ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300">
+                        <ShoppingCart className="w-4" />
+                        ADD TO CART
+                    </button>
                 </div>
             </div>
         </div>
